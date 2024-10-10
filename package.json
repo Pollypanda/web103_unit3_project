@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"cd client && vite\" \"cd server && nodemon server\"",
-    "start": "cd server && node server",
+    "start": "concurrently \"cd project3/client && npm run dev\" \"cd server && node server\"",
+    "reset": "node config/reset.js",
     "build": "cd client && vite build"
   },
   "dependencies": {
